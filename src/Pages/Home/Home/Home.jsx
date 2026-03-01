@@ -1,5 +1,6 @@
 import About from "../About/About";
 import Banner from "../Banner/Banner";
+import Categories from "../Categories/Categories";
 import Skills from "../Skills/Skills";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Banner />
       <About/>
       <Skills/>
+      <Categories/>
     </section>
   )
 }
