@@ -1,4 +1,5 @@
 import { MdOutlineEmail } from "react-icons/md";
+import { Link } from "react-scroll";
 
 export default function Banner() {
 
@@ -15,11 +16,11 @@ export default function Banner() {
           <p className="text-lg md:text-xl mb-12 text-gray-600 w-3xl mx-auto">Building modern, high-performance web applications with clean architecture and scalable solutions. Focused on turning ideas into impactful digital products.</p>
 
           <div className="flex justify-center gap-6">
-            <button className="btn flex gap-4 items-center px-8 py-6 bg-sky-300 hover:bg-sky-500 text-white font-medium rounded-lg transition-all duration-300 delay-2">
+            <Link to="contact"  className="btn flex gap-4 items-center px-8 py-6 bg-sky-300 hover:bg-sky-500 text-white font-medium rounded-lg transition-all duration-300 delay-2">
               <MdOutlineEmail className="text-xl animate-bounce delay-3" style={{animationDuration: "2s"}} /> <span>Get In Task</span>
-            </button>
+            </Link>
 
-            <button className="btn px-8 py-6 border border-blue-500 bg-white text-sky-400 hover:bg-sky-500 font-medium hover:text-white rounded-lg transition-all duration-300 delay-2">View My Work</button>
+            <Link to="categories" className="btn px-8 py-6 border border-blue-500 bg-white text-sky-400 hover:bg-sky-500 font-medium hover:text-white rounded-lg transition-all duration-300 delay-2">View My Work</Link>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function Navbar() {
             <div className="flex justify-around items-center">
 
                 {/* Logo */}
-                <h1  className="text-[28px] font-serif font-extrabold text-gray-500 cursor-pointer">
+                <h1 className="text-[28px] font-serif font-extrabold text-gray-500 cursor-pointer">
                     <Link to="home">Imran <span className="text-sky-400">Sirajee</span></Link>
                 </h1>
 
@@ -36,7 +36,7 @@ export default function Navbar() {
                             duration={500}
                             offset={-80}
                             spy={true}
-                            activeClass="text-sky-400 -top-1"
+                            activeClass="text-sky-400"
                             className="cursor-pointer relative group text-gray-500 hover:text-sky-400 "
                         >
                             Home
@@ -51,7 +51,7 @@ export default function Navbar() {
                             duration={500}
                             offset={-80}
                             spy={true}
-                            activeClass="text-sky-400 -top-1"
+                            activeClass="text-sky-400"
                             className="cursor-pointer relative group text-gray-500 hover:text-sky-400"
                         >
                             About
@@ -66,7 +66,7 @@ export default function Navbar() {
                             duration={500}
                             offset={-80}
                             spy={true}
-                            activeClass="text-sky-400 -top-1"
+                            activeClass="text-sky-400"
                             className="cursor-pointer relative group text-gray-500 hover:text-sky-400"
                         >
                             Skills
@@ -81,7 +81,7 @@ export default function Navbar() {
                             duration={500}
                             offset={-80}
                             spy={true}
-                            activeClass="text-sky-400 -top-1"
+                            activeClass="text-sky-400"
                             className="cursor-pointer relative group text-gray-500 hover:text-sky-400"
                         >
                             Projects
@@ -96,7 +96,7 @@ export default function Navbar() {
                             duration={500}
                             offset={-80}
                             spy={true}
-                            activeClass="text-sky-400 -top-1"
+                            activeClass="text-sky-400"
                             className="cursor-pointer relative group text-gray-500 hover:text-sky-400"
                         >
                             Contact
