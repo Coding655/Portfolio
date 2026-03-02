@@ -151,3 +151,204 @@
 
 //                             </div>
 //                         </div>
+
+
+// back to tp and react scroll
+
+// import React from 'react';
+// import { Link, Element, animateScroll as scroll } from 'react-scroll';
+
+// export default function App() {
+//   return (
+//     <div>
+//       {/* Navbar */}
+//       <nav className="fixed top-0 w-full bg-white shadow p-4 flex justify-around">
+//         <Link to="home" smooth={true} duration={500} className="cursor-pointer">Home</Link>
+//         <Link to="about" smooth={true} duration={500} className="cursor-pointer">About</Link>
+//         <Link to="contact" smooth={true} duration={500} className="cursor-pointer">Contact</Link>
+//       </nav>
+
+//       <div className="pt-16">
+//         {/* Sections */}
+//         <Element name="home" className="h-screen flex items-center justify-center bg-sky-100">
+//           <h1 className="text-4xl font-bold">Home Section</h1>
+//         </Element>
+
+//         <Element name="about" className="h-screen flex items-center justify-center bg-green-100">
+//           <h1 className="text-4xl font-bold">About Section</h1>
+//         </Element>
+
+//         <Element name="contact" className="h-screen flex items-center justify-center bg-pink-100">
+//           <h1 className="text-4xl font-bold">Contact Section</h1>
+//           <button
+//             onClick={() => scroll.scrollToTop({ duration: 500 })}
+//             className="mt-4 px-4 py-2 bg-sky-400 text-white rounded"
+//           >
+//             Back to Top
+//           </button>
+//         </Element>
+//       </div>
+//     </div>
+//   );
+// }
+
+//navbar 
+
+// import { useEffect, useState } from "react";
+// import { IoMdDownload } from "react-icons/io";
+// import { Link } from "react-scroll";
+
+// export default function Navbar() {
+//     const [scrolled, setScrolled] = useState(false)
+
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             setScrolled(window.scrollY > 50)
+//         }
+
+//         window.addEventListener("scroll", handleScroll);
+//         return () => window.removeEventListener("scroll", handleScroll)
+
+//     }, [])
+
+//     return (
+//         <nav className={`fixed w-full left-0 top-0 z-10 px-6 py-3 transition-all duration-300 delay-1 ${scrolled ? "bg-white shadow" : "bg-transparent"} `}>
+//             <div className="flex justify-around items-center">
+//                 <h1 className="text-[28px] font-serif font-extrabold text-gray-500">Imran <span className="text-sky-400">Sirajee</span></h1>
+//                 <ul className="flex gap-12 text-[20px] font-semibold">
+//                     <li>
+//                         <Link smooth={true} duration={500} href="#home" className="relative group text-gray-500 hover:text-sky-400 focus:text-sky-400">Home
+//                             <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-sky-400 transition-all duration-300 group-hover:w-full g roup-focus:w-full">
+//                             </span>
+//                         </Link>
+//                     </li>
+
+//                     <li>
+//                         <a href="#home" className="relative group text-gray-500 hover:text-sky-400 focus:text-sky-400">About
+//                             <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-sky-400 transition-all duration-300 group-hover:w-full group-focus:w-full">
+//                             </span>
+//                         </a>
+//                     </li>
+
+//                     <li>
+//                         <a href="#home" className="relative group text-gray-500 hover:text-sky-400 focus:text-sky-400">Skills
+//                             <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-sky-400 transition-all duration-300 group-hover:w-full group-focus:w-full">
+//                             </span>
+//                         </a>
+//                     </li>
+
+//                     <li>
+//                         <a href="#home" className="relative group text-gray-500 hover:text-sky-400 focus:text-sky-400">Projects
+//                             <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-sky-400 transition-all duration-300 group-hover:w-full group-focus:w-full">
+//                             </span>
+//                         </a>
+//                     </li>
+
+//                     <li>
+//                         <a href="#home" className="relative group text-gray-500 hover:text-sky-400 focus:text-sky-400">Contact
+//                             <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-sky-400 transition-all duration-300 group-hover:w-full group-focus:w-full">
+//                             </span>
+//                         </a>
+//                     </li>
+
+//                 </ul>
+
+//                 <button className="flex items-center gap-3 text-sky-400 border border-sky-400 hover:bg-white px-6 py-2 rounded-xl transition-all duration-300 delay-1">
+//                     <IoMdDownload />
+//                     <span className="font-serif ">Resume</span>
+//                 </button>
+//             </div>
+//         </nav>
+//     )
+// }
+// navbar 2
+
+// Navbar.jsx
+// import { useEffect, useState } from "react";
+// import { IoMdDownload } from "react-icons/io";
+// import { Link } from "react-scroll";
+// import { HiMenu, HiX } from "react-icons/hi";
+
+// export default function Navbar() {
+//     const [scrolled, setScrolled] = useState(false);
+//     const [mobileOpen, setMobileOpen] = useState(false);
+
+//     useEffect(() => {
+//         const handleScroll = () => setScrolled(window.scrollY > 50);
+//         window.addEventListener("scroll", handleScroll);
+//         return () => window.removeEventListener("scroll", handleScroll);
+//     }, []);
+
+//     const navItems = ["home", "about", "skills", "projects", "contact"];
+
+//     return (
+//         <nav
+//             className={`fixed w-full left-0 top-0 z-20 px-6 py-3 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-transparent"
+//                 }`}
+//         >
+//             <div className="flex justify-between items-center max-w-7xl mx-auto">
+//                 {/* Logo */}
+//                 <h1 className="text-2xl md:text-3xl font-serif font-extrabold text-gray-500">
+//                     Imran <span className="text-sky-400">Sirajee</span>
+//                 </h1>
+
+//                 {/* Desktop Menu */}
+//                 <ul className="hidden md:flex gap-8 text-lg font-semibold">
+//                     {navItems.map((item) => (
+//                         <li key={item}>
+//                             <Link
+//                                 to={item}
+//                                 smooth={true}
+//                                 duration={500}
+//                                 offset={-80} // Adjust for fixed navbar height
+//                                 className="relative group text-gray-500 hover:text-sky-400 cursor-pointer"
+//                             >
+//                                 {item.charAt(0).toUpperCase() + item.slice(1)}
+//                                 <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+//                             </Link>
+//                         </li>
+//                     ))}
+//                 </ul>
+
+//                 {/* Resume Button */}
+//                 <button className="hidden md:flex items-center gap-2 text-sky-400 border border-sky-400 hover:bg-white px-4 py-2 rounded-xl transition-all duration-300">
+//                     <IoMdDownload />
+//                     <span className="font-serif">Resume</span>
+//                 </button>
+
+//                 {/* Mobile Hamburger */}
+//                 <div className="md:hidden">
+//                     <button onClick={() => setMobileOpen(!mobileOpen)}>
+//                         {mobileOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+//                     </button>
+//                 </div>
+//             </div>
+
+//             {/* Mobile Menu */}
+//             {mobileOpen && (
+//                 <ul className="flex flex-col items-center gap-6 mt-4 bg-white shadow-md py-6 md:hidden">
+//                     {navItems.map((item) => (
+//                         <li key={item}>
+//                             <Link
+//                                 to={item}
+//                                 smooth={true}
+//                                 duration={500}
+//                                 offset={-80}
+//                                 className="text-gray-500 hover:text-sky-400 text-xl cursor-pointer"
+//                                 onClick={() => setMobileOpen(false)}
+//                             >
+//                                 {item.charAt(0).toUpperCase() + item.slice(1)}
+//                             </Link>
+//                         </li>
+//                     ))}
+//                     <li>
+//                         <button className="flex items-center gap-2 text-sky-400 border border-sky-400 hover:bg-white px-4 py-2 rounded-xl transition-all duration-300">
+//                             <IoMdDownload />
+//                             <span className="font-serif">Resume</span>
+//                         </button>
+//                     </li>
+//                 </ul>
+//             )}
+//         </nav>
+//     );
+// }

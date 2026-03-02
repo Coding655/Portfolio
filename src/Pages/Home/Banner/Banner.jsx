@@ -3,7 +3,7 @@ import { MdOutlineEmail } from "react-icons/md";
 export default function Banner() {
 
   return (
-    <section>
+    <section id="home">
        {/* banner */}
       <div className='min-h-screen bg-sky-100 w-full items-center justify-center px-6 md:px-12 lg:px-24 py-24'>
 

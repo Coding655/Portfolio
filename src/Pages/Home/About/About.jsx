@@ -1,4 +1,6 @@
+import { Helmet } from "react-helmet";
 import img from "/images/img2.png"
+import OnePageTitleHandler from "../../../TitleHandler/OnePageTitleHandler";
 
 const About = () => {
   return (
@@ -6,7 +8,7 @@ const About = () => {
       id="about"
       className="py-20 px-6 md:px-16 overflow-hidden"
     >
-       <style>
+      <style>
         {`
           @keyframes floatX {
             0% { transform: translateX(0px); }
@@ -23,7 +25,7 @@ const About = () => {
       </style>
 
       {/* Decorative Circles */}
-      <div className="absolute left-110 w-24 h-24 bg-blue-200 rounded-full opacity-40 animate-bounce" style={{animationDuration: "4s"}}></div>
+      <div className="absolute left-110 w-24 h-24 bg-blue-200 rounded-full opacity-40 animate-bounce" style={{ animationDuration: "4s" }}></div>
       <div className="absolute -bottom-120 w-20 h-20 bg-blue-400 rounded-full opacity-40 animate-bounce" style={{ animation: "floatX 5s ease-in-out infinite" }}></div>
 
       <div className="flex flex-col md:flex-row  items-center gap-12">
